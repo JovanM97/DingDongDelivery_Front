@@ -1,0 +1,36 @@
+<div class="profile">
+
+
+    <td>
+        <label><b>Username: </b></label>
+        <label class="data"><b>{{user.username}}</b></label>
+        <br><br>
+        <label><b>Email: </b></label>
+        <label class="data"><b>{{user.email}}</b></label>
+        <br><br>
+        <label><b>First name: </b></label>
+        <label class="data"><b>{{user.firstName}}</b></label>
+        <br><br>
+        <label><b>Last name: </b></label>
+        <label class="data"><b>{{user.lastName}}</b></label>
+        <br><br>
+        <label><b>Date of birth: </b></label>
+        <label class="data"><b>{{user.dateOfBirth | date: 'dd MMM yyyy' }}</b></label>
+        <br><br>
+        <label><b>Address: </b></label>
+        <label class="data"><b>{{user.address}}</b></label>
+        <br><br>
+        <label><b>User type: </b></label>
+        <label class="data"><b>{{userT}}</b></label>
+        <br><br>
+        <button routerLink="/profile-edit" class="btn">EDIT</button>
+        
+    </td>
+    <td style="float: right; margin-top: -350px;">
+
+        <img src={{image}} style="border: 10px; color: black; width: 230px; height: 290px;">
+        <br><br>
+        <button style="margin-left: 45px;" class="btn" routerLink="/dashboard">BACK</button>
+
+    </td>
+</div>

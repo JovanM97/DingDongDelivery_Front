@@ -1,0 +1,24 @@
+<div class="product">
+    <form (submit)="onSubmit()" [formGroup]="productForm">
+        <td>
+            <label><b>Name: </b></label>
+            <label class="data"><b>{{product.name}}</b></label>
+            <br><br>
+            <label><b>Price: </b></label>
+            <label class="data"><b>{{product.price}}</b></label>
+            <br><br>
+            <label><b>Ingredients: </b></label>
+            <label class="data"><b>{{product.ingredients}}</b></label>
+            <br><br>
+            <div *ngIf="isShopping == true">
+                <label ><b>Quantity: </b></label>
+                <input class="data" style="width: 50px;" type="number" formControlName="quantity">
+                <br><br>
+                <button type="submit" class="btn">ADD ITEM</button>
+            </div>
+        </td>
+    </form>
+
+        
+
+</div>

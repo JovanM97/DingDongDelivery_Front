@@ -1,0 +1,67 @@
+<br>
+<div style="text-align: center;">
+    <label style="font-size: 30px; color: black;"><b>Sign Up</b></label>
+    <br>
+    <label style="font-size: 20px; color: black;"><b>Already have an account? </b></label>
+    <a style="color: red; cursor: pointer;" routerLink="/login" ><b>Sign in</b></a>
+    
+    <form (submit)="onSubmit()" [formGroup]="registerForm">
+        <td style="padding-left: 30px;">
+
+            <label><b>Username:</b></label>
+            <br>
+            <input class="input" type="text" formControlName="username">
+            <br>
+            <label><b>Email Address:</b></label>
+            <br>
+            <input class="input" type="text" placeholder="example@email.com" formControlName="email">
+            <br>
+            <label><b>Password:</b></label>
+            <br>
+            <input class="input" type="password" placeholder="Password" formControlName="password">
+            <br>
+            <label><b>Repeat Password:</b></label>
+            <br>
+            <input class="input" type="password" placeholder="Password" formControlName="password2">
+            <div *ngIf="registerForm.hasError('notSame')" style="height: 10px;">
+                <label style="font-size: 15px; color: red;"><b>Passwords do not match</b></label>
+            </div>  
+            <br>
+            <label><b>User Type:</b></label>
+            <br>
+            <select class="input" style="width: 310px;" formControlName="userT">
+                <option selected value="BUYER"> BUYER</option>
+                <option value="DELIVERYMAN"> DELIVERY MAN</option>
+            </select>
+            <br>
+            <label><b>First name:</b></label>
+            <br>
+            <input class="input" type="text" formControlName="firstName">
+            <br>
+            <label><b>Last name:</b></label>
+            <br>
+            <input class="input" type="text" formControlName="lastName">
+            <br>
+        </td>
+        <td>
+        <td style="padding-left: 30px;">
+
+            <label><b>Date Of Birth:</b></label>
+            <br>
+            <input class="input" type="date" max='2010-01-01' formControlName="dateOfBirth">
+            <br>
+            <label><b>Address:</b></label>
+            <br>
+            <input class="input" type="text" formControlName="address">
+            <label><b>Profile Picture:</b></label>
+            <br><br>
+            <img src={{url}} style="border: 10px; color: black; width: 220px; height: 270px;">
+            <br>
+            <input style="width: 40%;" type="file" accept="image/png, image/jpeg,  image/jpg" class="imageBtn" (change)="onFileChanged($event)" formControlName="image">
+        </td>
+            <br><br>
+        <button type="submit" class="login"> Register </button>
+        <br>
+    </form>
+</div>
+<br>

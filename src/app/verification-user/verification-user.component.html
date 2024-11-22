@@ -1,0 +1,33 @@
+<div class="user">
+    <td class="right">
+        <label style="color: grey;"><b>Date of birth: </b></label>
+        <label class="data"><b>{{user.dateOfBirth | date: 'dd MMM yyyy' }}</b></label>
+        <br><br>
+        <label style="color: grey;"><b>Address: </b></label>
+        <label class="data"><b>{{user.address}}</b></label>
+        <br><br>
+        <label style="color: grey;"><b>User type: </b></label>
+        <label class="data"><b>{{userT}}</b></label>
+        <br><br>
+        <label style="color: grey;"><b>User status: </b></label>
+        <label class="data"><b>{{userStatus}}</b></label>
+        <br><br>
+        <button *ngIf="user.isActive == false" class="btn" (click)="accept()" style="background-color: green;">APROVE</button>
+        <button *ngIf="user.isActive == false" class="btn" (click)="reject()" style="margin-left: 100px;">REJECT</button>
+    </td>
+    <td>
+        <label style="color: grey;"><b>Username: </b></label>
+        <label class="data"><b>{{user.username}}</b></label>
+        <br><br>
+        <label style="color: grey;"><b>Email: </b></label>
+        <label class="data"><b>{{user.email}}</b></label>
+        <br><br>
+        <label style="color: grey;"><b>First name: </b></label>
+        <label class="data"><b>{{user.firstName}}</b></label>
+        <br><br>
+        <label style="color: grey;"><b>Last name: </b></label>
+        <label class="data"><b>{{user.lastName}}</b></label>
+        <br><br>
+    </td>
+
+</div>

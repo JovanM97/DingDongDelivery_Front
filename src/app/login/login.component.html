@@ -1,0 +1,19 @@
+<br>
+<div>
+    <form (submit)="onSubmit()" [formGroup]="loginForm">
+        <label><b>Email Address:</b></label>
+        <br>
+        <input class="input" type="text" placeholder="example@email.com" formControlName="email">
+        <br><br>
+        <label><b>Password:</b></label>
+        <br>
+        <input class="input" type="password" placeholder="Password" formControlName="password">
+        <br><br>
+        <button type="submit" class="login"> Sign In </button>
+        <br>
+        <button type="button" (click)="loginWithFacebook()" class="fa fa-facebook">Sign in with Facebook</button>
+        <br>
+        <a style="color: red;" routerLink="/register" ><b> Create account </b></a>
+    </form>
+</div>
+<br>

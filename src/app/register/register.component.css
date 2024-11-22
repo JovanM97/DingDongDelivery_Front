@@ -1,0 +1,42 @@
+.column {
+    float: left;
+}
+
+.left{
+    width: 30%;
+}
+
+.right{
+    width: 70%;
+}
+
+.input {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+}
+
+label, a {
+    font-size: 20px;
+    color: gray;
+}
+
+.login {
+    color: white;
+    text-align: center;
+    width: 300px;
+    height: 60px;
+    background-color: red;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight:bold;
+    border-radius: 8px;
+    border: 0ch;
+    cursor: pointer;
+}
+
+.imageBtn{
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+}

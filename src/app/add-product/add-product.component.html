@@ -1,0 +1,22 @@
+<br>
+<div>
+    <form (submit)="onSubmit()" [formGroup]="productForm">
+        <label style="color: black; font-size: 30px;"><b>NEW PRODUCT:</b></label>
+        <br>
+        <label><b>Product name:</b></label>
+        <br>
+        <input class="input" type="text" formControlName="name">
+        <br><br>
+        <label><b>Price:</b></label>
+        <br>
+        <input class="input" type="number" formControlName="price">
+        <br><br>
+        <label><b>Ingredients:</b></label>
+        <br>
+        <textarea class="input" wrap="soft" style="resize: vertical;" formControlName="ingredients"></textarea>
+        <br><br>
+        <button type="submit" class="login"> ADD </button>
+        <br>
+    </form>
+</div>
+<br>

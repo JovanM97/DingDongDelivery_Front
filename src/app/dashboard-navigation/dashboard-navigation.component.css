@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+.btn{
+    width: 195px;
+    height: 195px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#btn1{
+    background-color: wheat;
+    background-image:url('src\assets\account.png');
+}
+
+#btn2{
+    background-color: wheat;
+    background-image:url('src\assets\cart.png');
+}
+
+#btn3{
+    background-color: wheat;
+    background-image:url('src\assets\archive.png');
+}
+
+#btn4{
+    background-color: wheat;
+    background-image:url('src\assets\card-search.png');
+}
+
+#btn5{
+    background-color: wheat;
+    background-image:url('src\assets\shop.png');
+}
+
+#btn6{
+    background-color: wheat;
+    background-image:url('src\assets\taxi.png');
+}
+
+#btn7{
+    background-color: wheat;
+    background-image:url('src\assets\logout.png');
+}
+
+.center{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+td{
+    width: 20vw;
+}
+
+label{
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}

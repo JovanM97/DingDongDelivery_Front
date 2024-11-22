@@ -1,0 +1,17 @@
+<div>
+    <div style="height: 800px;">
+        <br>
+        <h1 class="title">Ding Dong Delivery</h1>
+
+        <div class="center">
+            <button  class="btn" routerLink="/dashboard">DASHBOARD</button>
+        </div>
+        <br>
+        <div *ngFor="let u of users">
+            <app-verification-user *ngIf="u.userT == 1" [user]="u" ></app-verification-user>
+            <br>
+        </div>
+        <br>
+        
+    </div>
+</div>

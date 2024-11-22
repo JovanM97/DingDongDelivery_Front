@@ -1,0 +1,45 @@
+<div class="profile">
+    <form (submit)="onSubmit()" [formGroup]="editForm">
+    <td>
+        <label><b>Username: </b></label>
+        <input [(ngModel)]="user.username" value="{{user.username}}" class="data" formControlName="username">
+        <br><br>
+        <label><b>Email: </b></label>
+        <label class="data"><b>{{user.email}}</b></label>
+        <br><br>
+        <label><b>First name: </b></label>
+        <input [(ngModel)]="user.firstName" value="{{user.firstName}}" class="data" formControlName="firstName">
+        <br><br>
+        <label><b>Last name: </b></label>
+        <input [(ngModel)]="user.lastName" value="{{user.lastName}}" class="data" formControlName="lastName">
+        <br><br>
+        <label><b>Password: </b></label>
+        <input type="password" class="data" formControlName="password">
+        <br><br>
+        <label><b>Repeat password: </b></label>
+        <input type="password" class="data" formControlName="password2">
+        <div *ngIf="editForm.hasError('notSame')" style="height: 10px;">
+            <label style="font-size: 15px; color: red;"><b>Passwords do not match</b></label>
+        </div>  
+        <br><br>
+        <label><b>Date of birth: </b></label>
+        <input [(ngModel)]="userDate" type="date" max='2010-01-01' value="{{userDate | date: 'YYYY-MM-dd'}}" class="data" formControlName="dateOfBirth">
+        <br><br>
+        <label><b>Address: </b></label>
+        <input [(ngModel)]="user.address" value="{{user.address}}" class="data" formControlName="address">
+        <br><br>
+        <label><b>User type: </b></label>
+        <label class="data"><b>{{userT}}</b></label>
+        <br><br>
+        <button style="background-color: green;" type="submit" class="btn">SAVE</button>
+        
+    </td>
+    <td style="float: right; margin-top: -350px;">
+
+        <img src={{image}} style="border: 10px; color: black; width: 230px; height: 290px;">
+        <br><br>
+        <button style="margin-left: 45px;" class="btn" routerLink="/profile">BACK</button>
+
+    </td>
+</form>
+</div>

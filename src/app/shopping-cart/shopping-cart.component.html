@@ -1,0 +1,22 @@
+<br>
+<div>
+        <label style="color: black; font-size: 30px;"><b>SHOPPING CART:</b></label>
+        <hr style="margin-right: 20px;">
+        <br>
+        <div *ngFor="let p of cart">
+            <form>
+                <label><b>- {{p.quantity}}x </b></label>
+                <label><b>{{p.name}}</b></label>
+                <input type="hidden" value="">
+                <button (click)="RemoveProduct(p)" class="btn">X</button>
+                <label style="float: right; margin-right: 5px;"><b>{{p.price}} RSD</b></label>
+            </form>
+        </div>
+        <hr style="margin-right: 20px;">
+        <label><b>TOTAL:</b></label>
+        <label style="float: right; margin-right: 20px;"><b>{{total}} RSD</b></label>
+        <br><br>
+        <button style="font-size: 30px; width:150px" (click)="GoToPayment()" class="btn">DONE</button>
+        <br><br>
+</div>
+<br>

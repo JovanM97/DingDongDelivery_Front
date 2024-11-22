@@ -1,0 +1,17 @@
+<div>
+    <div style="height: 800px;">
+        <br>
+        <h1 class="title">Ding Dong Delivery</h1>
+        <h3 class="title2">Current Order</h3>
+        <div class="center">
+            <button  class="btn" routerLink="/dashboard">DASHBOARD</button>
+        </div>
+        <br>
+        <div *ngIf="order != null" class="profile">
+            <app-current-order [order]="order"></app-current-order>
+        </div>
+        <div *ngIf="order == null">
+            <h3 class="title2">No order for delivery</h3>
+        </div>
+    </div>
+</div>

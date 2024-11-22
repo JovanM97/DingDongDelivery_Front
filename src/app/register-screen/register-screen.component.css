@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+
+.image{
+    height: 40em;
+    background-size:cover;
+    width:auto;
+    background-image:url('src\assets\hero_landing_us_alt.jpg');
+    background-position:50% 50%;
+    
+  }
+
+
+.title{
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 120px;
+}
+
+.login{
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: aliceblue;
+
+    
+}
+
+.loginPos{
+    margin: auto;
+    background-color: whitesmoke;
+    width: 44em;
+    vertical-align: middle;
+}
+

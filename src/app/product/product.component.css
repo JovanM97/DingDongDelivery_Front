@@ -1,0 +1,36 @@
+label, a {
+    font-size: 25px;
+    color: grey;
+}
+
+.data{
+    font-size: 25px;
+    color: black;
+}
+
+.imageBtn{
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.btn {
+    color: white;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    background-color: red;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight:bold;
+    border-radius: 8px;
+    border: 0ch;
+    cursor: pointer;
+}
+
+.product {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 20px 25px 20px 25px;
+    border-radius: 10px;
+}

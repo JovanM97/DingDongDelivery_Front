@@ -1,0 +1,84 @@
+<div class="center">
+
+    <td *ngIf="checkType() == 'NONE'">
+    </td>
+    <td>
+        <div>
+            <button class="btn" id="btn1" routerLink="/profile"></button>
+            <br>
+            <label>PROFILE</label>
+        </div>
+    </td>
+    <td *ngIf="checkType() == 'NONE'">
+    </td>
+    <td *ngIf="checkType() == 'BUYER'">
+        <div>
+            <button class="btn" id="btn2" routerLink="/new-order"></button>
+            <br>
+            <label>NEW ORDER</label>
+        </div>
+    </td>
+    <td *ngIf="checkType() == 'BUYER'">
+        <div>
+            <button class="btn" id="btn6" routerLink="/current-order"></button>
+            <br>
+            <label>CURRENT ORDER</label>
+        </div>
+    </td>
+    <td *ngIf="checkType() == 'BUYER'">
+        <div>
+            <button class="btn" id="btn3" routerLink="/previous-orders"></button>
+            <br>
+            <label>PREVIOUS ORDERS</label>
+        </div>
+    </td>
+    <td *ngIf="checkType() == 'ADMIN'">
+        <div>
+            <button class="btn" id="btn4" routerLink="/verifications"></button>
+            <br>
+            <label>VERIFICATIONS</label>
+        </div>
+    </td>
+    <td *ngIf="checkType() == 'ADMIN'">
+        <div>
+            <button class="btn" id="btn3" routerLink="/previous-orders"></button>
+            <br>
+            <label>ALL DELIVERIES</label>
+        </div>
+    </td>
+    <td *ngIf="checkType() == 'ADMIN'">
+        <div>
+            <button class="btn" id="btn5" routerLink="/add-product"></button>
+            <br>
+            <label>ADD NEW ITEMS</label>
+        </div>
+    </td>
+    <td *ngIf="checkType() == 'DELIVERYMAN'">
+        <div>
+            <button class="btn" id="btn2" routerLink="/delivery-orders"></button>
+            <br>
+            <label>NEW ORDERS</label>
+        </div>
+    </td>
+    <td *ngIf="checkType() == 'DELIVERYMAN'">
+        <div>
+            <button class="btn" id="btn6" routerLink="/current-order"></button>
+            <br>
+            <label>CURRENT ORDER</label>
+        </div>
+    </td>
+    <td *ngIf="checkType() == 'DELIVERYMAN'">
+        <div>
+            <button class="btn" id="btn3" routerLink="/previous-orders"></button>
+            <br>
+            <label>MY ORDERS</label>
+        </div>
+    </td>
+    <td>
+        <div>
+            <button (click)="signOut()" class="btn" id="btn7"></button>
+            <br>
+            <label>SIGN OUT</label>
+        </div>
+    </td>
+</div>

@@ -1,0 +1,40 @@
+<div class="profile">
+    <td>
+        <label><b>Order ID: </b></label>
+        <label class="data"><b>{{order.orderId}}</b></label>
+        <br><br>
+        <label><b>Address: </b></label>
+        <label class="data"><b>{{order.orderAddress}}</b></label>
+        <br><br>
+        <label><b>Buyers comment: </b></label>
+        <label class="data"><b>{{order.orderComment}}</b></label>
+        <br><br>
+        <label><b>Status: </b></label>
+        <label *ngIf="order.isAccepted == true" class="data"><b>ACCEPTED</b></label>
+        <label *ngIf="order.isAccepted == false" class="data"><b>PROCESSING</b></label>
+        
+        
+        <div *ngIf="checkType() != 'NONE' && order.isAccepted == true">
+            <br><br>
+            <label><b>Time of delivery: </b></label>
+            <label *ngIf="false" class="data"><b>{{order.timeTillDelivery | date:" HH:mm"}}</b></label>
+            <label class="data"><b>{{hoursToDday}}:{{minutesToDday}}:{{secondsToDday}}</b></label>
+        </div>
+        <br><br>
+
+
+    </td>
+    <td style="padding-left: 250px; padding-right: 50px; ">
+        <label><b>Order: </b></label>
+        <div *ngFor="let p of products">
+            <br>
+            <label class="data"><b> - {{p.quantity}} x {{p.name}}</b></label>
+        </div>
+        <br><br>
+        <label><b>Total price: </b></label>
+        <label class="data"><b>{{order.orderPrice}}</b></label>
+        <br><br>
+      
+
+    </td>
+</div>

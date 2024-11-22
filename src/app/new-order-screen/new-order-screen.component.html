@@ -1,0 +1,25 @@
+<div>
+    <div style="min-height: 800px;">
+        <br>
+        <h1 class="title">Ding Dong Delivery</h1>
+        <div class="center">
+            <button  class="btn" routerLink="/dashboard">DASHBOARD</button>
+        </div>
+        <h3 class="title" style="font-size: 40px; margin-top: 0;">Make your order</h3>
+        <br>
+        <div class="profile">
+            <td>
+                <div *ngFor="let p of products" class="column left">
+                    <app-product (addProduct)="addProduct(p)" [isShopping]="true" [product]="p"></app-product>
+                    <br>
+                </div>
+            </td>
+            <td>
+                <div class="column right">
+                    <app-shopping-cart [cart]="cart"></app-shopping-cart>
+                </div>
+            </td>
+        </div>
+    </div>
+    <br><br><br><br>
+</div>

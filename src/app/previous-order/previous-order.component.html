@@ -1,0 +1,44 @@
+<div class="profile">
+    <td>
+        <label><b>Order ID: </b></label>
+        <label class="data"><b>{{order.orderId}}</b></label>
+        <br><br>
+        <label><b>Address: </b></label>
+        <label class="data"><b>{{order.orderAddress}}</b></label>
+        <br><br>
+        <label><b>Buyer: </b></label>
+        <label class="data"><b>{{buyer}}</b></label>
+        <br><br>
+        <label><b>Deliveryman: </b></label>
+        <label class="data"><b>{{delivery}}</b></label>
+        <br><br>
+        
+        <label><b>Buyers comment: </b></label>
+        <label class="data"><b>{{order.orderComment}}</b></label>
+        
+        <div *ngIf="checkType() == 'ADMIN'">
+            <br><br>
+            <label><b>STATUS: </b></label>
+            <label *ngIf="order.isDelivered == true" class="data"><b>DELIVERED</b></label>
+            <label *ngIf="order.isDelivered == false" class="data"><b>NOT DELIVERED</b></label>
+        </div>
+        
+
+    </td>
+    <td style="padding-left: 150px; margin-top: -300px;">
+        <label><b>Order: </b></label>
+        <div *ngFor="let p of products">
+            <br>
+            <label class="data"><b> - {{p.quantity}} x {{p.name}}</b></label>
+        </div>
+        <br><br>
+        <label><b>Total price: </b></label>
+        <label class="data"><b>{{order.orderPrice}} RSD</b></label>
+        <br><br>
+      
+        <div *ngIf="isDelivery == true">
+            <br><br>
+            <button class="btn" (click)="accept()" style="background-color: green; margin-left: 100px;">Accept</button>
+        </div>
+    </td>
+</div>

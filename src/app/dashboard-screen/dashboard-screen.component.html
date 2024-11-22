@@ -1,0 +1,16 @@
+<div>
+    <div style="height: 800px;">
+        <br>
+        <h1 class="title">Ding Dong Delivery</h1>
+        <h2 class="title2" style="font-size: 30px;">Welcome {{username}}</h2>
+        <div *ngIf="user.isActive == true && user.userT == 1">
+            <h2 class="title2" style="font-size: 30px;">Status : ACTIVE</h2>
+        </div>
+        <div *ngIf="user.isActive == false && user.userT == 1">
+            <h2 class="title2" style="font-size: 30px;">Status : NOT ACTIVE</h2>
+        </div>
+        <div class="navbar">
+            <app-dashboard-navigation [currentUser]="user"></app-dashboard-navigation>
+        </div>
+    </div>
+</div>
